@@ -1,0 +1,26 @@
+2- Write a program that reads a text file and displays the longest word in the file. 
+>>>
+using System;
+using System.Text;
+using System.IO;
+
+namespace excercise
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          var path = @"C:\Users\dexter\Desktop\test.txt";
+          var text = File.ReadAllText(path);
+          var words = text.Split(' ');
+          var largestWord = "";
+          foreach (var word in words)
+          {
+              if (word.Length > largestWord.Length)
+                  largestWord = word;
+          }
+          Console.WriteLine(largestWord);
+        }
+        
+    }
+}
