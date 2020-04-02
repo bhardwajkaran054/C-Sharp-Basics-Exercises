@@ -1,0 +1,21 @@
+1- Write a program that reads a text file and displays the number of words.
+
+>>>
+using System;
+using System.Text;
+using System.IO;
+
+namespace excercise
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          var path = @"C:\Users\dexter\Desktop\test.txt";
+          var text = File.ReadAllText(path);
+
+          Console.WriteLine(text);
+        }
+        
+    }
+}
